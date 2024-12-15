@@ -20,11 +20,11 @@ class Truck extends Vehicle {
 
 public class VehicleType {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
 
         System.out.print("How many vehicles would you like to add? ");
-        int numVehicles = scanner.nextInt();
-        scanner.nextLine();
+        int numVehicles = s.nextInt();
+        s.nextLine();
 
         Vehicle[] vehicles = new Vehicle[numVehicles];
 
@@ -34,7 +34,7 @@ public class VehicleType {
 
             while (true) {
                 System.out.print("Enter vehicle type (car/truck): ");
-                type = scanner.nextLine().toLowerCase();
+                type = s.nextLine().toLowerCase();
 
                 if (type.equals("car")) {
                     vehicle = new Car();
